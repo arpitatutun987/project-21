@@ -41,10 +41,10 @@ if (hasCollided(bullet,wall)) {
   var damage = 0.5 * weight * speed * speed/(thickness * thickness * thickness);
 
   if(damage>10){
-    wall.shapeColor = "green";
+    wall.shapeColor = "red";
   }
 
-  if(damage>10){
+  if(damage<10){
     wall.shapeColor = "green";
   }
 }
@@ -55,7 +55,7 @@ if (hasCollided(bullet,wall)) {
 function hasCollided(lbullet,lwall){
   bulletRightEdge = lbullet.x + lbullet.width;
   wallLeftEdge = lwall.x;
-  if(bulletRightEdge > = wallLeftEdge){
+  if(bulletRightEdge >=wallLeftEdge){
     return true
   }
 
